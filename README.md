@@ -37,3 +37,8 @@ kubectl: Correctly Configured: pointing to minikube-vm at 192.168.99.101
 
 4. Install Helm 
 `choco install kubernetes-helm`
+
+## Context switch
+`kubectl config use-context minikube`
+or for AWS configuration
+`kubectl config use-context minikube`
