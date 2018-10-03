@@ -20,7 +20,8 @@ https://www.virtualbox.org/wiki/Downloads
 
 - Run Minikube on VirtualBox: 
 `minikube start --vm-driver="virtualbox" --alsologtostderr`
-Make sure minikube running using `minikube status`
+
+- Make sure minikube running using `minikube status`
 Sample output:
 ```
 minikube: Running
@@ -28,15 +29,31 @@ cluster: Running
 kubectl: Correctly Configured: pointing to minikube-vm at 192.168.99.101
 ```
 `minikube dashboard` - should open dashboard in your default browser
+`kubectl get pods -n kube-system` - should list the pods from namespace `kube-system`
+*IMPORTANT* make sure `C:\Users\<user>\.kube\config` was created  during minikube installation. 
 
 - Stop Minukube:
 `minikube stop`
 
-- Increase RAM memory for minikube up to 4Gb using VirtualBox Settings
+- Increase RAM memory for minikube up to 4Gb using VirtualBox Settings and start minikube
 
+4. Install istio
+Follow guide to install istio: https://istio.io/docs/setup/kubernetes/quick-start/#download-and-prepare-for-the-installation
+Option 1 (without TLS) is acceptable
 
-4. Install Helm 
+5. Install Helm 
 `choco install kubernetes-helm`
+
+
+6. Install Visual Studio Code
+Install from here https://code.visualstudio.com/
+Open the VS Code, add `Kubernetes` extension
+
+## Deploying an application
+
+### Reusing Docker from minikube
+Open Gitbash and execute `eval $(minikube docker-env)`
+Build you application using: `docker build -t <your image tag> <path to Dockerfile>`
 
 ## Context switch
 `kubectl config use-context minikube`
