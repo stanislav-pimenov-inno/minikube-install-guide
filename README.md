@@ -27,6 +27,7 @@ minikube: Running
 cluster: Running
 kubectl: Correctly Configured: pointing to minikube-vm at 192.168.99.101
 ```
+`minikube dashboard` - should open dashboard in your default browser
 
 - Stop Minukube:
 `minikube stop`
