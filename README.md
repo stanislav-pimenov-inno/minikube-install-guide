@@ -1,5 +1,6 @@
 # minikube-install-guide
 
+## Setup Developer's environemt
 
 0. Install chocolatey package manager
 https://chocolatey.org/install
@@ -58,7 +59,13 @@ Open the VS Code, add `Kubernetes` extension
 ### Reusing Docker from minikube
 Open Gitbash and execute `eval $(minikube docker-env)`
 
+### Build
 Build you application using: `docker build -t <your image tag> <path to Dockerfile>`
+
+
+### Deploy the app
+
+`kubectl create -f <your app descriptor>.yaml`
 
 ## Context switch
 
