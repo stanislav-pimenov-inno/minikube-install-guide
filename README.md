@@ -115,6 +115,19 @@ or for AWS configuration
 
 `> kubectl config use-context aws`
 
+## Installing redis with Help Chart
+
+Windows:
+```
+helm install --name dev-redis ^
+--set password=secretPassword ^
+--set master.persistence.enabled=false ^
+--set-string master.podAnnotations."sidecar\.istio\.io/inject=false" ^
+--set-string slave.podAnnotations."sidecar\.istio\.io/inject=false" ^
+stable/redis
+```
+
+For Linux use `\` for multiline joining
 
 ## Useful links
 
