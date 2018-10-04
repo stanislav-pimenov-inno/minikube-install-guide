@@ -76,4 +76,4 @@ Build you application using: `docker build -t <your image tag> <path to Dockerfi
 
 or for AWS configuration
 
-`kubectl config use-context minikube`
+`kubectl config use-context aws`
