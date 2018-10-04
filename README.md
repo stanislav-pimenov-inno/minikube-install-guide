@@ -49,6 +49,11 @@ Follow guide to install istio: https://istio.io/docs/setup/kubernetes/quick-star
 
 Option 1 (without TLS) is acceptable
 
+Ensure that minikube cluster labelled to use istio injection:
+
+`kubectl label namespace default istio-injection=enabled`
+
+
 5. Install Helm 
 
 `choco install kubernetes-helm`
@@ -63,7 +68,22 @@ Open the VS Code, add `Kubernetes` extension
 ## Deploying an application
 
 ### Reusing Docker from minikube
-Open Gitbash and execute `eval $(minikube docker-env)`
+
+Gitbash: `$ eval $(minikube docker-env)`
+Windows Command Prompt: 
+
+`> minikube docker-env`
+
+then follow the instruction provided in the command output:
+```
+> minikube docker-env
+SET DOCKER_TLS_VERIFY=1
+SET DOCKER_HOST=tcp://192.168.99.100:2376
+SET DOCKER_CERT_PATH=C:\Users\stanislav_pimenov\.minikube\certs
+SET DOCKER_API_VERSION=1.35
+REM Run this command to configure your shell:
+REM @FOR /f "tokens=*" %i IN ('minikube docker-env') DO @%i
+```
 
 ### Build
 Build you application using: `docker build -t <your image tag> <path to Dockerfile>`
@@ -72,7 +92,7 @@ Build you application using: `docker build -t <your image tag> <path to Dockerfi
 
 ### Deploy the app
 
-`kubectl create -f <your app descriptor>.yaml`
+`kubectl apply -f <your app descriptor>.yaml`
 
 ## Context switch
 
