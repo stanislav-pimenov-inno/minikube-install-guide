@@ -111,3 +111,8 @@ Build you application using: `docker build -t <image tag> <path to Dockerfile>`
 or for AWS configuration
 
 `kubectl config use-context aws`
+
+
+## Useful links
+
+[Running your own Docker containers in Minikube for Windows](https://medium.com/@maumribeiro/running-your-own-docker-images-in-minikube-for-windows-ea7383d931f6)
