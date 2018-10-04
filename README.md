@@ -69,12 +69,14 @@ Open the VS Code, add `Kubernetes` extension
 
 ### Reusing Docker from minikube
 
-Gitbash: `$ eval $(minikube docker-env)`
-Windows Command Prompt: 
+- Gitbash: `$ eval $(minikube docker-env)`
+
+- Windows Command Prompt: 
 
 `> minikube docker-env`
 
 then follow the instruction provided in the command output:
+
 ```
 > minikube docker-env
 SET DOCKER_TLS_VERIFY=1
