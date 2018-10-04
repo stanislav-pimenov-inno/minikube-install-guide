@@ -1,6 +1,6 @@
 # minikube-install-guide
 
-## Setup Developer's environemt
+## Setup Developer's environmet
 
 0. Install chocolatey package manager
 https://chocolatey.org/install
@@ -41,7 +41,7 @@ kubectl: Correctly Configured: pointing to minikube-vm at 192.168.99.101
 
 - Increase RAM memory for minikube up to 8Gb using VirtualBox Settings or during start: `minikube start --memory=8192 --cpus=4 ...`
 
-Minimal recommemded RAM: 4Gb
+Minimal recommended RAM: 4Gb
 
 4. Install istio
 
