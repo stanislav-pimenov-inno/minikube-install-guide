@@ -21,7 +21,7 @@ Execeutables included to the classpath can be found under chocolatey directory: 
 https://www.virtualbox.org/wiki/Downloads
 
 - Run Minikube on VirtualBox: 
-`> minikube start --vm-driver="virtualbox" --alsologtostderr`
+`> minikube start --memory=6144 --vm-driver="virtualbox" --alsologtostderr`
 
 - Make sure minikube running using `> minikube status`
 
@@ -40,7 +40,7 @@ kubectl: Correctly Configured: pointing to minikube-vm at 192.168.99.101
 - Stop Minukube:
 `> minikube stop`
 
-- Increase RAM memory for minikube up to 8Gb using VirtualBox Settings or during start:
+- *optional* Increase RAM memory for minikube up to 8Gb using VirtualBox Settings or during start:
 
 `> minikube start --memory=8192 --cpus=4 ...`
 
