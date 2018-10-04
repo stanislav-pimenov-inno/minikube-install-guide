@@ -88,11 +88,19 @@ REM @FOR /f "tokens=*" %i IN ('minikube docker-env') DO @%i
 ```
 
 ### Build
-Build you application using: `docker build -t <your image tag> <path to Dockerfile>`
+Build you application using: `docker build -t <image tag> <path to Dockerfile>`
 
-*Example*: `docker build -t company/app:1.0 .`
+*Example*: `docker build -t api-stub:1.0 .`
 
-### Deploy the app
+### Deploy the app from container
+
+- Create deployment
+`kubectl run <deployment name> --image=<image tag> --port=8888`
+
+- Expose as a service
+`kubectl expose deployment <deployment name> --type="LoadBalancer"`
+
+### Deploy the app with app description
 
 `kubectl apply -f <your app descriptor>.yaml`
 
