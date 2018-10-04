@@ -6,6 +6,7 @@
 https://chocolatey.org/install
 
 1. Install minikube
+
 `choco install minikube`
 
 2. Check kubectl installation with `kubectl version`.
@@ -40,14 +41,16 @@ kubectl: Correctly Configured: pointing to minikube-vm at 192.168.99.101
 
 - Increase RAM memory for minikube up to 8Gb using VirtualBox Settings or during start: `minikube start --memory=8192 --cpus=4 ...`
 
-Minimal recommemde RAM: 4Gb
+Minimal recommemded RAM: 4Gb
 
 4. Install istio
+
 Follow guide to install istio: https://istio.io/docs/setup/kubernetes/quick-start/#download-and-prepare-for-the-installation
 
 Option 1 (without TLS) is acceptable
 
 5. Install Helm 
+
 `choco install kubernetes-helm`
 
 
