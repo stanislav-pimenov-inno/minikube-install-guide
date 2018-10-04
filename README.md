@@ -65,6 +65,7 @@ Open Gitbash and execute `eval $(minikube docker-env)`
 ### Build
 Build you application using: `docker build -t <your image tag> <path to Dockerfile>`
 
+*Example*: `docker build -t company/app:1.0 .`
 
 ### Deploy the app
 
