@@ -115,7 +115,7 @@ or for AWS configuration
 
 `> kubectl config use-context aws`
 
-## Installing redis with Help Chart
+## Installing Redis with Helm Chart
 
 Windows:
 ```
