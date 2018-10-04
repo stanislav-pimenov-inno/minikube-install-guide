@@ -38,7 +38,9 @@ kubectl: Correctly Configured: pointing to minikube-vm at 192.168.99.101
 - Stop Minukube:
 `minikube stop`
 
-- Increase RAM memory for minikube up to 4Gb using VirtualBox Settings and start minikube
+- Increase RAM memory for minikube up to 8Gb using VirtualBox Settings or during start: `minikube start --memory=8192 --cpus=4 ...`
+
+Minimal recommemde RAM: 4Gb
 
 4. Install istio
 Follow guide to install istio: https://istio.io/docs/setup/kubernetes/quick-start/#download-and-prepare-for-the-installation
