@@ -12,7 +12,7 @@ https://chocolatey.org/install
 
 If doesn't work execute: `choco install kubernetes-cli`
 
-Execeutables included to the class can be found under chocolatey directory: `C:\ProgramData\chocolatey\bin`
+Execeutables included to the classpath can be found under chocolatey directory: `C:\ProgramData\chocolatey\bin`
 
 3. Run minikube on VirtualBox
 
