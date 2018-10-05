@@ -59,9 +59,14 @@ Ensure that minikube cluster labelled to use istio injection:
 
 5. Install Helm 
 
+Easy way:
+
 `> choco install kubernetes-helm`
 
+ Manually: https://github.com/helm/helm/releases
 
+ Init helm: `> helm init`
+ 
 6. Install Visual Studio Code
 
 Install from here https://code.visualstudio.com/
@@ -95,7 +100,7 @@ Build you application using: `docker build -t <image tag> <path to Dockerfile>`
 
 *Example*: `> docker build -t api-stub:1.0 .`
 
-### Deploy the app from container
+### Deploy the app from image
 
 - Create deployment
 `> kubectl run <deployment name> --image=<image tag> --port=8888`
