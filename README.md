@@ -35,7 +35,7 @@ kubectl: Correctly Configured: pointing to minikube-vm at 192.168.99.101
 
 `> kubectl get pods -n kube-system` - should list the pods from namespace `kube-system`
 
-*IMPORTANT* make sure `C:\Users\<user>\.kube\config` was created  during minikube installation. 
+**IMPORTANT** make sure `C:\Users\<user>\.kube\config` was created  during minikube installation. 
 
 - Stop Minukube:
 `> minikube stop`
@@ -50,7 +50,7 @@ Minimal recommended RAM: 4Gb
 
 Follow guide to install istio: https://istio.io/docs/setup/kubernetes/quick-start/#download-and-prepare-for-the-installation
 
-Option 1 (without TLS) is acceptable
+Option 1 (without TLS) is preferable 
 
 Ensure that minikube cluster labelled to use istio injection:
 
@@ -133,6 +133,18 @@ stable/redis
 ```
 
 For Linux use `\` for multiline joining
+
+## Port forwarding
+
+To access pods that are not exposed as LoadBalancer or via Ambassador Gateway use port forwarding.
+
+Example for prometheus and grafana hosts:
+```
+> kubectl port-forward prometheus-84bd4b9796-cx24r 9090:9090 -n istio-system
+> kubectl port-forward grafana-6cbdcfb45-g87q8 3000:3000 -n istio-system
+```
+
+Then acess them http:localhost:9090 and http:localhost:3000 correspondingly
 
 ## Useful links
 
