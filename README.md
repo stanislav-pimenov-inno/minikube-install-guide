@@ -100,6 +100,8 @@ Build you application using: `docker build -t <image tag> <path to Dockerfile>`
 
 *Example*: `> docker build -t api-stub:1.0 .`
 
+Make sure image appeared in docker: `> docker images`
+
 ### Deploy the app from image
 
 - Create deployment
