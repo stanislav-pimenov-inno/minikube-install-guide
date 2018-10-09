@@ -17,6 +17,10 @@ Execeutables included to the classpath can be found under chocolatey directory: 
 
 3. Run minikube on VirtualBox
 
+**IMPORTANT** Disable Hyper-V feature on your Windows PC:
+
+from admin CMD: `>bcdedit /set hypervisorlaunchtype off`
+
 - Install VirtualBox
 https://www.virtualbox.org/wiki/Downloads
 
