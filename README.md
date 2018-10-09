@@ -150,7 +150,7 @@ Example for prometheus and grafana hosts:
 > kubectl port-forward grafana-6cbdcfb45-g87q8 3000:3000 -n istio-system
 ```
 
-Then acess them http:localhost:9090 and http:localhost:3000 correspondingly
+Then acess them http://localhost:9090 and http://localhost:3000 correspondingly
 
 ## Useful links
 
