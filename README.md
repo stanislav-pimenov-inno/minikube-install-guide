@@ -19,7 +19,7 @@ Execeutables included to the classpath can be found under chocolatey directory: 
 
 **IMPORTANT** Disable Hyper-V feature on your Windows PC:
 
-from admin CMD: `>bcdedit /set hypervisorlaunchtype off`
+from admin CMD: `> bcdedit /set hypervisorlaunchtype off`
 
 - Install VirtualBox
 https://www.virtualbox.org/wiki/Downloads
