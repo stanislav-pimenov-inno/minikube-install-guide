@@ -56,10 +56,9 @@ Follow guide to install istio: https://istio.io/docs/setup/kubernetes/quick-star
 
 Option 1 (without TLS) is preferable 
 
-Ensure that minikube cluster labelled to use istio injection:
+Ensure that minikube cluster labelled not to use istio injection:
 
-`> kubectl label namespace default istio-injection=enabled`
-
+`> kubectl label namespace default istio-injection=disabled --overwrite`
 
 5. Install Helm 
 
@@ -151,6 +150,13 @@ Example for prometheus and grafana hosts:
 ```
 
 Then acess them http://localhost:9090 and http://localhost:3000 correspondingly
+
+## Access external resources from Istio service mesh
+
+To access external services from service mesh a ServiceEntry need to be added
+https://istio.io/docs/reference/config/istio.networking.v1alpha3/#ServiceEntry
+Example:
+https://istio.io/blog/2018/egress-tcp/#mesh-external-service-entry-for-an-external-mysql-instance
 
 ## Useful links
 
