@@ -157,6 +157,8 @@ To access external services from service mesh a ServiceEntry need to be added:
 
 https://istio.io/docs/reference/config/istio.networking.v1alpha3/#ServiceEntry
 
+https://istio.io/docs/tasks/traffic-management/egress/
+
 Example:
 
 https://istio.io/blog/2018/egress-tcp/#mesh-external-service-entry-for-an-external-mysql-instance
