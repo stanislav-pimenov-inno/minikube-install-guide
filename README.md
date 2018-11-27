@@ -117,6 +117,12 @@ Make sure image appeared in docker: `> docker images`
 
 `> kubectl apply -f <your app descriptor>.yaml`
 
+### Add to Istion Service Mesh: Manual sidecar injection
+
+If the namespace is marked as `istio-injection=disabled` then manual sidecar injection is needed:
+
+https://istio.io/docs/setup/kubernetes/sidecar-injection/#manual-sidecar-injection
+
 ## Context switch
 
 `> kubectl config use-context minikube`
