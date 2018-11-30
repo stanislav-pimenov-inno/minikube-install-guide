@@ -175,4 +175,4 @@ https://istio.io/blog/2018/egress-tcp/#mesh-external-service-entry-for-an-extern
 
 [Running your own Docker containers in Minikube for Windows](https://medium.com/@maumribeiro/running-your-own-docker-images-in-minikube-for-windows-ea7383d931f6)
 
-[Service types: NodePort vs LoadBalancer] (https://medium.com/google-cloud/kubernetes-nodeport-vs-loadbalancer-vs-ingress-when-should-i-use-what-922f010849e0) 
+[Service types: NodePort vs LoadBalancer](https://medium.com/google-cloud/kubernetes-nodeport-vs-loadbalancer-vs-ingress-when-should-i-use-what-922f010849e0) 
