@@ -111,7 +111,7 @@ Make sure image appeared in docker: `> docker images`
 `> kubectl run <deployment name> --image=<image tag> --port=8888`
 
 - Expose as a service
-`> kubectl expose deployment <deployment name> --type="LoadBalancer"`
+`> kubectl expose deployment <deployment name> --type="NodePort"`
 
 ### Deploy the app with app description
 
@@ -147,7 +147,7 @@ For Linux use `\` for multiline joining
 
 ## Port forwarding
 
-To access pods that are not exposed as LoadBalancer or via Ambassador Gateway use port forwarding.
+To access pods that are not exposed as NodePort or LoadBalancer or via Ambassador Gateway use port forwarding.
 
 Example for prometheus and grafana hosts:
 ```
@@ -174,3 +174,5 @@ https://istio.io/blog/2018/egress-tcp/#mesh-external-service-entry-for-an-extern
 [Managing Resources in Kubernetes](https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/)
 
 [Running your own Docker containers in Minikube for Windows](https://medium.com/@maumribeiro/running-your-own-docker-images-in-minikube-for-windows-ea7383d931f6)
+
+[Service types: NodePort vs LoadBalancer] (https://medium.com/google-cloud/kubernetes-nodeport-vs-loadbalancer-vs-ingress-when-should-i-use-what-922f010849e0) 
