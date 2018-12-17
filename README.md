@@ -2,18 +2,31 @@
 
 ## Setup Developer's environmet
 
-0. Install chocolatey package manager
-https://chocolatey.org/install
+0. Install package manager
+
+Windows: https://chocolatey.org/install
+
+MacOS: `$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
 1. Install minikube
 
-`> choco install minikube`
+Windows:
+```
+> choco install minikube
+> choco install kubernetes-cli
+```
 
-2. Check kubectl installation with `> kubectl version`.
+Executables included to the classpath can be found under chocolatey directory: `C:\ProgramData\chocolatey\bin`
 
-If doesn't work execute: `> choco install kubernetes-cli`
+MacOS:
+```
+$ brew cask install minikube
+$ brew install kubectl
+```
 
-Execeutables included to the classpath can be found under chocolatey directory: `C:\ProgramData\chocolatey\bin`
+2. Check kubectl installation with
+
+Windows/MacOS `> kubectl version`.
 
 3. Run minikube on VirtualBox
 
@@ -23,6 +36,8 @@ from admin CMD: `> bcdedit /set hypervisorlaunchtype off`
 
 - Install VirtualBox
 https://www.virtualbox.org/wiki/Downloads
+
+MacOS: `brew cask install virtualbox`
 
 - Run Minikube on VirtualBox: 
 `> minikube start --memory=6144 --vm-driver="virtualbox" --alsologtostderr`
