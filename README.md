@@ -73,6 +73,17 @@ https://istio.io/docs/setup/kubernetes/quick-start/#download-and-prepare-for-the
 - from Prerequisities section you need step 1
 - Whithin installation steps: Option 1 (without TLS) is preferable 
 
+Example (MacOS):
+```
+curl -L https://git.io/getLatestIstio | sh -
+# add to you ~/.bash_profile: export PATH="$PATH:$HOME/istio-1.0.5/bin"
+cd istio-1.0.5
+kubectl apply -f install/kubernetes/helm/istio/templates/crds.yaml
+kubectl apply -f install/kubernetes/istio-demo.yaml
+# what some time, then make sure istio service are up and running
+kubectl get svc -n istio-system
+```
+
 Ensure that minikube cluster labelled not to use istio injection for default namespace:
 
 `> kubectl label namespace default istio-injection=disabled --overwrite`
@@ -99,7 +110,7 @@ Open the VS Code, add `Kubernetes` extension
 
 ### Reusing Docker from minikube
 
-- Gitbash: `$ eval $(minikube docker-env)`
+- Gitbash/MacOs: `$ eval $(minikube docker-env)`
 
 - Windows Command Prompt: 
 
