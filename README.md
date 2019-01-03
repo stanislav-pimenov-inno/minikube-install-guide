@@ -67,9 +67,11 @@ Minimal recommended RAM: 4Gb
 
 4. Install istio
 
-Follow guide to install istio: https://istio.io/docs/setup/kubernetes/quick-start/#download-and-prepare-for-the-installation
-
-Option 1 (without TLS) is preferable 
+Follow guide to install istio: 
+https://istio.io/docs/setup/kubernetes/quick-start/#download-and-prepare-for-the-installation
+**IMPORTANT:** 
+- from Prerequisities section you need step 1
+- Whithin installation steps: Option 1 (without TLS) is preferable 
 
 Ensure that minikube cluster labelled not to use istio injection for default namespace:
 
@@ -80,6 +82,7 @@ Ensure that minikube cluster labelled not to use istio injection for default nam
 Easy way:
 
 Windows: `> choco install kubernetes-helm`
+
 MacOS: `$ brew install kubernetes-helm`
 
  Manually: https://github.com/helm/helm/releases
