@@ -79,7 +79,8 @@ Ensure that minikube cluster labelled not to use istio injection for default nam
 
 Easy way:
 
-`> choco install kubernetes-helm`
+Windows: `> choco install kubernetes-helm`
+MacOS: `$ brew install kubernetes-helm`
 
  Manually: https://github.com/helm/helm/releases
 
