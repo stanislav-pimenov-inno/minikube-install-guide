@@ -80,7 +80,7 @@ curl -L https://git.io/getLatestIstio | sh -
 cd istio-1.0.5
 kubectl apply -f install/kubernetes/helm/istio/templates/crds.yaml
 kubectl apply -f install/kubernetes/istio-demo.yaml
-# what some time, then make sure istio service are up and running
+# wait some time, then make sure istio services are up and running
 kubectl get svc -n istio-system
 ```
 
