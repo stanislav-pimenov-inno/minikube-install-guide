@@ -52,6 +52,8 @@ kubectl: Correctly Configured: pointing to minikube-vm at 192.168.99.101
 ```
 `> minikube dashboard` - should open dashboard in your default browser
 
+`> minikube ip` - to get minikube ip
+
 `> kubectl get pods -n kube-system` - should list the pods from namespace `kube-system`
 
 **IMPORTANT** make sure `C:\Users\<user>\.kube\config` was created  during minikube installation. 
