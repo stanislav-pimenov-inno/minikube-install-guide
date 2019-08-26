@@ -24,22 +24,24 @@ $ brew cask install minikube
 $ brew install kubectl
 ```
 
-2. Check kubectl installation with
+Check kubectl installation with
 
 Windows/MacOS `> kubectl version`.
 
-3. Run minikube on VirtualBox
+2. Install Virtual Box
+
 
 **IMPORTANT** Disable Hyper-V feature on your Windows PC:
 
 from admin CMD: `> bcdedit /set hypervisorlaunchtype off`
 
-- Install VirtualBox
+Windows: ??? https://www.virtualbox.org/wiki/Downloads ??? profit
 
-Windows: https://www.virtualbox.org/wiki/Downloads ??? profit
 MacOS: `brew cask install virtualbox`
 
-- Run Minikube on VirtualBox: 
+3. Run minikube 
+
+To run Minikube on VirtualBox: 
 `> minikube start --memory=6144 --vm-driver="virtualbox" --alsologtostderr`
 
 - Make sure minikube running using `> minikube status`
