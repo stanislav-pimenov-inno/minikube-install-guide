@@ -35,8 +35,8 @@ Windows/MacOS `> kubectl version`.
 from admin CMD: `> bcdedit /set hypervisorlaunchtype off`
 
 - Install VirtualBox
-https://www.virtualbox.org/wiki/Downloads
 
+Windows: https://www.virtualbox.org/wiki/Downloads ??? profit
 MacOS: `brew cask install virtualbox`
 
 - Run Minikube on VirtualBox: 
@@ -71,6 +71,7 @@ Minimal recommended RAM: 4Gb
 
 Follow guide to install istio: 
 https://istio.io/docs/setup/kubernetes/quick-start/#download-and-prepare-for-the-installation
+
 **IMPORTANT:** 
 - from Prerequisities section you need step 1
 - Whithin installation steps: Option 1 (without TLS) is preferable 
@@ -144,6 +145,9 @@ Make sure image appeared in docker: `> docker images`
 
 - Expose as a service
 `> kubectl expose deployment <deployment name> --type="NodePort"`
+
+- Scale deployment
+`$ kubectl autoscale deployment wiremock --min=2 --max=5`
 
 ### Deploy the app with app description
 
