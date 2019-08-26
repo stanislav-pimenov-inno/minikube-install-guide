@@ -8,7 +8,7 @@ Windows: https://chocolatey.org/install
 
 MacOS: `$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
-1. Install minikube
+#### 1. Install minikube
 
 Windows:
 ```
@@ -28,8 +28,7 @@ Check kubectl installation with
 
 Windows/MacOS `> kubectl version`.
 
-2. Install Virtual Box
-
+#### 2. Install Virtual Box
 
 **IMPORTANT** Disable Hyper-V feature on your Windows PC:
 
@@ -39,10 +38,12 @@ Windows: ??? https://www.virtualbox.org/wiki/Downloads ??? profit
 
 MacOS: `brew cask install virtualbox`
 
-3. Run minikube 
+#### 3. Run minikube 
 
 To run Minikube on VirtualBox: 
 `> minikube start --memory=6144 --vm-driver="virtualbox" --alsologtostderr`
+
+##### Verfify minikube installation
 
 - Make sure minikube running using `> minikube status`
 
@@ -58,7 +59,7 @@ kubectl: Correctly Configured: pointing to minikube-vm at 192.168.99.101
 
 `> kubectl get pods -n kube-system` - should list the pods from namespace `kube-system`
 
-**IMPORTANT** make sure `C:\Users\<user>\.kube\config` was created  during minikube installation. 
+**IMPORTANT** make sure `C:\Users\<user>\.kube\config` ( `~/.kube/config` for MacOS) was created  during minikube installation. 
 
 - Stop Minukube:
 `> minikube stop`
@@ -69,7 +70,7 @@ kubectl: Correctly Configured: pointing to minikube-vm at 192.168.99.101
 
 Minimal recommended RAM: 4Gb
 
-4. Install istio
+#### 4. Install istio
 
 Follow guide to install istio: 
 https://istio.io/docs/setup/kubernetes/quick-start/#download-and-prepare-for-the-installation
@@ -93,7 +94,7 @@ Ensure that minikube cluster labelled not to use istio injection for default nam
 
 `> kubectl label namespace default istio-injection=disabled --overwrite`
 
-5. Install Helm 
+#### 5. Install Helm 
 
 Easy way:
 
@@ -105,7 +106,7 @@ MacOS: `$ brew install kubernetes-helm`
 
  Init helm: `> helm init`
  
-6. Install Visual Studio Code
+#### 6. Install Visual Studio Code
 
 Install from here https://code.visualstudio.com/
 
@@ -142,16 +143,20 @@ Make sure image appeared in docker: `> docker images`
 
 ### Deploy the app from image
 
-- Create deployment
+#### Create deployment
+
 `> kubectl run <deployment name> --image=<image tag> --port=8888`
 
-- Expose as a service
+#### Expose as a service
+
 `> kubectl expose deployment <deployment name> --type="NodePort"`
 
-- Scale deployment
+#### Scale deployment
+
 `$ kubectl autoscale deployment wiremock --min=2 --max=5`
 
-- Verify created Horizontal Pod Autoscaler
+#### Verify created Horizontal Pod Autoscaler
+
 `$ kubectl get hpa wiremock`
 
 ### Deploy the app with app description
