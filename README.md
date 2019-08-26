@@ -149,6 +149,9 @@ Make sure image appeared in docker: `> docker images`
 - Scale deployment
 `$ kubectl autoscale deployment wiremock --min=2 --max=5`
 
+- Verify created Horizontal Pod Autoscaler
+`$ kubectl get hpa wiremock`
+
 ### Deploy the app with app description
 
 `> kubectl apply -f <your app descriptor>.yaml`
