@@ -157,17 +157,17 @@ Make sure image appeared in docker: `> docker images`
 
 #### Scale deployment
 
-`$ kubectl autoscale deployment wiremock --min=2 --max=5`
+`$ kubectl autoscale deployment <deployment name> --min=2 --max=5`
 
 #### Verify created Horizontal Pod Autoscaler
 
-`$ kubectl get hpa wiremock`
+`$ kubectl get hpa <deployment name>`
 
 #### Add to Istion Service Mesh: Manual sidecar injection
 
 If the namespace is marked as `istio-injection=disabled` then manual sidecar injection is needed:
 
-`$ kubectl get deployment wiremock -o yaml | istioctl kube-inject -f - | kubectl apply -f -`
+`$ kubectl get deployment <deployment name> -o yaml | istioctl kube-inject -f - | kubectl apply -f -`
 
 see for details: https://istio.io/docs/setup/kubernetes/sidecar-injection/#manual-sidecar-injection
 
