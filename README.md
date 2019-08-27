@@ -141,9 +141,13 @@ Build you application using: `docker build -t <image tag> <path to Dockerfile>`
 
 Make sure image appeared in docker: `> docker images`
 
-### Deploy the app from image
+### Deploying an application
 
-#### Create deployment
+#### Create deployment from the app descriptor
+
+`> kubectl apply -f <your app descriptor>.yaml`
+
+#### Create deployment from image
 
 `> kubectl run <deployment name> --image=<image tag> --port=8888`
 
@@ -159,15 +163,13 @@ Make sure image appeared in docker: `> docker images`
 
 `$ kubectl get hpa wiremock`
 
-### Deploy the app with app description
-
-`> kubectl apply -f <your app descriptor>.yaml`
-
-### Add to Istion Service Mesh: Manual sidecar injection
+#### Add to Istion Service Mesh: Manual sidecar injection
 
 If the namespace is marked as `istio-injection=disabled` then manual sidecar injection is needed:
 
-https://istio.io/docs/setup/kubernetes/sidecar-injection/#manual-sidecar-injection
+`$ kubectl get deployment wiremock -o yaml | istioctl kube-inject -f - | kubectl apply -f -`
+
+see for details: https://istio.io/docs/setup/kubernetes/sidecar-injection/#manual-sidecar-injection
 
 ## Context switch
 
