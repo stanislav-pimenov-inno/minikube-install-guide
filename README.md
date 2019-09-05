@@ -156,6 +156,8 @@ Make sure image appeared in docker: `> docker images`
 `> kubectl expose deployment <deployment name> --type="NodePort"`
 
 #### Scale deployment
+- `$ kubectl scale deployment <deployment name> --replicas=3`
+- or with Horizonral Pod Autoscaler:
 
 `$ kubectl autoscale deployment <deployment name> --min=2 --max=5`
 
